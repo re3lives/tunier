@@ -12,7 +12,8 @@ function Team(nameteam, tscore) {// funktion team name abspeichern
 
 function shuffleArray(array) {//funktion zum mischen inhalt array jede position im array wirdnach und nach per zufall mit einer anderen getauscht bis jede einmal getauscht
     for (var i = array.length - 1; i > 0; i--) { // i= länge array-1,solange i minus bis array leer
-        var j = Math.floor(Math.random() * (i + 1));//zufallszahl zwischen anzahl im array und 0 ganzezahl
+        var j = Math.floor(Math.random() * (i + 1));//zufallszahl zwischen anzahl im array und 0 ganzezahl ,math.floor rundet ab und random zahl zwischen 0 und 1
+        // get randome int wäre auch möglich mit  min 0 und max array.lenght
         [array[i], array[j]] = [array[j], array[i]]; // i=j gleichzeitiger tausch
     }
 }
